@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace YepMoreStrings
 {
@@ -119,12 +120,7 @@ namespace YepMoreStrings
             var input = Console.ReadLine().ToLower();
 
             var vowels = new List<char>(new char[] {'a', 'e', 'i', 'o', 'u'});
-            var vowelsCount = 0;
-            foreach (var character in input)
-            {
-                if (vowels.Contains(character))
-                    vowelsCount++;
-            }
+            var vowelsCount = input.Count(character => vowels.Contains(character));
 
             Console.WriteLine(vowelsCount);
         }
