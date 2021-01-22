@@ -30,22 +30,46 @@ namespace YepMoreStrings
 
         public void Exercise2()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("Enter a few numbers (eg 1-2-3-4): ");
+            var input = Console.ReadLine();
+
+            if (String.IsNullOrWhiteSpace(input))
+                return;
+
+            var numbers = new List<int>();
+            foreach (var number in input.Split('-'))
+                numbers.Add(Convert.ToInt32(number));
+
+            var uniques = new List<int>();
+            var includesDuplicates = false;
+            foreach (var number in numbers)
+            {
+                if (!uniques.Contains(number))
+                    uniques.Add(number);
+                else
+                {
+                    includesDuplicates = true;
+                    break;
+                }
+            }
+
+            if (includesDuplicates)
+                Console.WriteLine("Duplicate");
         }
 
         public void Exercise3()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine();
         }
 
         public void Exercise4()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine();
         }
 
         public void Exercise5()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine();
         }
     }
 }
