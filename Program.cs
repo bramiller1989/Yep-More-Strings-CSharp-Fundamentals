@@ -6,7 +6,12 @@ namespace YepMoreStrings
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Strings strings = new Strings();
+            strings.Exercise1();
+            strings.Exercise2();
+            strings.Exercise3();
+            strings.Exercise4();
+            strings.Exercise5();
         }
     }
 }
